@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSComparisonPredicate {
+public extension NSComparisonPredicate {
 	class func propertyEqual<T: AnyObject where T: Comparable>(#key: String, value: T) -> NSComparisonPredicate {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
@@ -47,17 +47,17 @@ extension NSComparisonPredicate {
 }
 
 infix operator ?= { associativity left }
-func ?= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+public func ?= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyEqual(key: key, value: value)
 }
 
 infix operator ?<> { associativity left }
-func ?<> <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+public func ?<> <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyNotEqual(key: key, value: value)
 }
 
 infix operator ?< { associativity left }
-func ?< <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+public func ?< <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyLess(key: key, value: value)
 }
 
@@ -67,11 +67,11 @@ func ?<= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparis
 }
 
 infix operator ?> { associativity left }
-func ?> <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+public func ?> <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyGreater(key: key, value: value)
 }
 
 infix operator ?>= { associativity left }
-func ?>= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+public func ?>= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyGreaterOrEqual(key: key, value: value)
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSCompoundPredicate {
+public extension NSCompoundPredicate {
 	class func and(predicates: NSPredicate ...) -> NSCompoundPredicate {
 		return NSCompoundPredicate.andPredicateWithSubpredicates(predicates)
 	}
@@ -19,11 +19,11 @@ extension NSCompoundPredicate {
 }
 
 infix operator && { associativity left }
-func &&(a: NSPredicate, b: NSPredicate) -> NSPredicate {
+public func &&(a: NSPredicate, b: NSPredicate) -> NSPredicate {
 	return NSCompoundPredicate.and(a, b)
 }
 
 infix operator || { associativity left }
-func ||(a: NSPredicate, b: NSPredicate) -> NSPredicate {
+public func ||(a: NSPredicate, b: NSPredicate) -> NSPredicate {
 	return NSCompoundPredicate.or(a, b)
 }
