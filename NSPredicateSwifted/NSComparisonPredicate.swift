@@ -8,16 +8,6 @@
 
 import Foundation
 
-public func ==(a: NSNumber, b: NSNumber) -> Bool {
-	return a.compare(b) == NSComparisonResult.OrderedSame
-}
-
-public func <(a: NSNumber, b: NSNumber) -> Bool {
-	return a.compare(b) == NSComparisonResult.OrderedAscending
-}
-
-extension NSNumber: Comparable {}
-
 extension NSComparisonPredicate {
 	class func propertyEqual<T: AnyObject where T: Comparable>(#key: String, value: T) -> NSComparisonPredicate {
 		let left = NSExpression(forKeyPath: key)
