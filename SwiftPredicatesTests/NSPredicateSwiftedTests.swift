@@ -13,8 +13,8 @@ class NSPredicateSwiftedTests: XCTestCase {
 	
 	let intArray: NSArray = [
 		["value":0, "name":"Paris"],
-		["value":1, "name":"Rome", "comment":"target"],
-		["value":-1, "name":"Rome"],
+		["value":1, "name":"Rome"],
+		["value":-1, "name":"Rome", "comment":"target"],
 		["value":55]
 	]
 	
@@ -52,6 +52,8 @@ class NSPredicateSwiftedTests: XCTestCase {
 		let predicate = "value" ?< 0 ?&& "name" ?= "Rome"
 		let result = intArray.filteredArrayUsingPredicate(predicate)
 		XCTAssert(result.count == 1, "Wrong result filtering < and ==")
+		let selection = result.last as NSDictionary
+		XCTAssert(selection["comment"]?.description == "target", "\(selection)")
 	}
 	
 //    func testPerformanceExample() {
