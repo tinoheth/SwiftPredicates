@@ -18,12 +18,12 @@ public extension NSCompoundPredicate {
 	}
 }
 
-infix operator && { associativity left }
-public func &&(a: NSPredicate, b: NSPredicate) -> NSPredicate {
+infix operator ?&& { associativity left precedence 120 }
+public func ?&&(a: NSPredicate, b: NSPredicate) -> NSPredicate {
 	return NSCompoundPredicate.and(a, b)
 }
 
-infix operator || { associativity left }
-public func ||(a: NSPredicate, b: NSPredicate) -> NSPredicate {
+infix operator ?|| { associativity left precedence 110 }
+public func ?||(a: NSPredicate, b: NSPredicate) -> NSPredicate {
 	return NSCompoundPredicate.or(a, b)
 }
