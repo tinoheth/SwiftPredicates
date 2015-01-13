@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A584E1801A61A2D00010AE00"
-               BuildableName = "NSPredicateSwifted.framework"
-               BlueprintName = "NSPredicateSwifted"
-               ReferencedContainer = "container:NSPredicateSwifted.xcodeproj">
+               BuildableName = "SwiftPredicates.framework"
+               BlueprintName = "SwiftPredicates"
+               ReferencedContainer = "container:SwiftPredicates.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A584E18B1A61A2D00010AE00"
-               BuildableName = "NSPredicateSwiftedTests.xctest"
-               BlueprintName = "NSPredicateSwiftedTests"
-               ReferencedContainer = "container:NSPredicateSwifted.xcodeproj">
+               BuildableName = "SwiftPredicatesTests.xctest"
+               BlueprintName = "SwiftPredicatesTests"
+               ReferencedContainer = "container:SwiftPredicates.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A584E18B1A61A2D00010AE00"
-               BuildableName = "NSPredicateSwiftedTests.xctest"
-               BlueprintName = "NSPredicateSwiftedTests"
-               ReferencedContainer = "container:NSPredicateSwifted.xcodeproj">
+               BuildableName = "SwiftPredicatesTests.xctest"
+               BlueprintName = "SwiftPredicatesTests"
+               ReferencedContainer = "container:SwiftPredicates.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A584E1801A61A2D00010AE00"
-            BuildableName = "NSPredicateSwifted.framework"
-            BlueprintName = "NSPredicateSwifted"
-            ReferencedContainer = "container:NSPredicateSwifted.xcodeproj">
+            BuildableName = "SwiftPredicates.framework"
+            BlueprintName = "SwiftPredicates"
+            ReferencedContainer = "container:SwiftPredicates.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A584E1801A61A2D00010AE00"
-            BuildableName = "NSPredicateSwifted.framework"
-            BlueprintName = "NSPredicateSwifted"
-            ReferencedContainer = "container:NSPredicateSwifted.xcodeproj">
+            BuildableName = "SwiftPredicates.framework"
+            BlueprintName = "SwiftPredicates"
+            ReferencedContainer = "container:SwiftPredicates.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A584E1801A61A2D00010AE00"
-            BuildableName = "NSPredicateSwifted.framework"
-            BlueprintName = "NSPredicateSwifted"
-            ReferencedContainer = "container:NSPredicateSwifted.xcodeproj">
+            BuildableName = "SwiftPredicates.framework"
+            BlueprintName = "SwiftPredicates"
+            ReferencedContainer = "container:SwiftPredicates.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
