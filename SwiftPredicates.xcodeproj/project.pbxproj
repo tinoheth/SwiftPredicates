@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A584E1871A61A2D00010AE00 /* NSPredicateSwifted.h in Headers */ = {isa = PBXBuildFile; fileRef = A584E1861A61A2D00010AE00 /* NSPredicateSwifted.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A584E18D1A61A2D00010AE00 /* SwiftPredicates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A584E1811A61A2D00010AE00 /* SwiftPredicates.framework */; };
-		A584E1941A61A2D00010AE00 /* NSPredicateSwiftedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584E1931A61A2D00010AE00 /* NSPredicateSwiftedTests.swift */; };
+		A584E1941A61A2D00010AE00 /* SwiftPredicatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584E1931A61A2D00010AE00 /* SwiftPredicatesTests.swift */; };
 		A584E19F1A61A3110010AE00 /* NSComparisonPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584E19D1A61A3110010AE00 /* NSComparisonPredicate.swift */; };
 		A584E1A01A61A3110010AE00 /* NSComparisonPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584E19D1A61A3110010AE00 /* NSComparisonPredicate.swift */; };
 		A584E1A11A61A3110010AE00 /* NSCompoundPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584E19E1A61A3110010AE00 /* NSCompoundPredicate.swift */; };
@@ -34,7 +34,7 @@
 		A584E1861A61A2D00010AE00 /* NSPredicateSwifted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPredicateSwifted.h; sourceTree = "<group>"; };
 		A584E18C1A61A2D00010AE00 /* SwiftPredicatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPredicatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A584E1921A61A2D00010AE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A584E1931A61A2D00010AE00 /* NSPredicateSwiftedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateSwiftedTests.swift; sourceTree = "<group>"; };
+		A584E1931A61A2D00010AE00 /* SwiftPredicatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPredicatesTests.swift; sourceTree = "<group>"; };
 		A584E19D1A61A3110010AE00 /* NSComparisonPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSComparisonPredicate.swift; sourceTree = "<group>"; };
 		A584E19E1A61A3110010AE00 /* NSCompoundPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCompoundPredicate.swift; sourceTree = "<group>"; };
 		A584E1A31A61A3870010AE00 /* NSNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumber.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		A584E1901A61A2D00010AE00 /* SwiftPredicatesTests */ = {
 			isa = PBXGroup;
 			children = (
-				A584E1931A61A2D00010AE00 /* NSPredicateSwiftedTests.swift */,
+				A584E1931A61A2D00010AE00 /* SwiftPredicatesTests.swift */,
 				A584E1911A61A2D00010AE00 /* Supporting Files */,
 			);
 			path = SwiftPredicatesTests;
@@ -232,7 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A584E1A21A61A3110010AE00 /* NSCompoundPredicate.swift in Sources */,
-				A584E1941A61A2D00010AE00 /* NSPredicateSwiftedTests.swift in Sources */,
+				A584E1941A61A2D00010AE00 /* SwiftPredicatesTests.swift in Sources */,
 				A584E1A01A61A3110010AE00 /* NSComparisonPredicate.swift in Sources */,
 				A584E1A51A61A3870010AE00 /* NSNumber.swift in Sources */,
 			);

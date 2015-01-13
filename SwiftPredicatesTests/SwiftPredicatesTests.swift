@@ -1,6 +1,6 @@
 //
-//  NSPredicateSwiftedTests.swift
-//  NSPredicateSwiftedTests
+//  SwiftPredicatesTests.swift
+//  SwiftPredicatesTests
 //
 //  Created by Tino Heth on 10.01.15.
 //  Copyright (c) 2015 Tino Heth. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class NSPredicateSwiftedTests: XCTestCase {
+class SwiftPredicatesTests: XCTestCase {
 	
 	let intArray: NSArray = [
 		["value":0, "name":"Paris"],

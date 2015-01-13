@@ -1,6 +1,6 @@
 //
-//  NSPredicateSwifted.h
-//  NSPredicateSwifted
+//  SwiftPredicates.h
+//  SwiftPredicates
 //
 //  Created by Tino Heth on 10.01.15.
 //  Copyright (c) 2015 Tino Heth. All rights reserved.
@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for NSPredicateSwifted.
-FOUNDATION_EXPORT double NSPredicateSwiftedVersionNumber;
+//! Project version number for SwiftPredicates.
+FOUNDATION_EXPORT double SwiftPredicatesVersionNumber;
 
-//! Project version string for NSPredicateSwifted.
-FOUNDATION_EXPORT const unsigned char NSPredicateSwiftedVersionString[];
+//! Project version string for SwiftPredicates.
+FOUNDATION_EXPORT const unsigned char SwiftPredicatesVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <NSPredicateSwifted/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <SwiftPredicates/PublicHeader.h>
 
 
