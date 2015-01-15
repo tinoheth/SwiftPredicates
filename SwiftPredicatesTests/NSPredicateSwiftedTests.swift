@@ -29,19 +29,19 @@ class NSPredicateSwiftedTests: XCTestCase {
     }
     
 	func testLess() {
-		let predicate = "value" ?< 0
+		let predicate = "value" < 0
 		let result = intArray.filteredArrayUsingPredicate(predicate)
 		XCTAssert(result.count == 1, "Wrong result filtering <")
 	}
 	
 	func testMoreOrEqual() {
-		let predicate = "value" ?>= 0
+		let predicate = "value" >= 0
 		let result = intArray.filteredArrayUsingPredicate(predicate)
 		XCTAssert(result.count == 3, "Wrong result filtering <")
 	}
 	
 	func testLessAndEqual() {
-		let a = "value" ?< 0
+		let a = "value" < 0
 		let b = "name" ?= "Rome"
 		let predicate = a && b
 		let result = intArray.filteredArrayUsingPredicate(predicate)
@@ -49,7 +49,7 @@ class NSPredicateSwiftedTests: XCTestCase {
 	}
 	
 	func testLessAndEqualCombined() {
-		let predicate = "value" ?< 0 && "name" ?= "Rome"
+		let predicate = "value" < 0 && "name" ?= "Rome"
 		let result = intArray.filteredArrayUsingPredicate(predicate)
 		XCTAssert(result.count == 1, "Wrong result filtering < and ==")
 		let selection = result.last as NSDictionary

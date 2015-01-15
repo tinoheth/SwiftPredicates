@@ -56,22 +56,22 @@ public func ?<> <T: AnyObject where T: Equatable>(key: String, value: T) -> NSCo
 	return NSComparisonPredicate.propertyNotEqual(key: key, value: value)
 }
 
-infix operator ?< { associativity left precedence 130 }
-public func ?< <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+//infix operator ?< { associativity left precedence 130 }
+public func < <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyLess(key: key, value: value)
 }
 
-infix operator ?<= { associativity left precedence 130 }
-func ?<= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+//infix operator ?<= { associativity left precedence 130 }
+func <= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyLessOrEqual(key: key, value: value)
 }
 
-infix operator ?> { associativity left precedence 130 }
-public func ?> <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+//infix operator ?> { associativity left precedence 130 }
+public func > <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyGreater(key: key, value: value)
 }
 
-infix operator ?>= { associativity left precedence 130 }
-public func ?>= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
+//infix operator ?>= { associativity left precedence 130 }
+public func >= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyGreaterOrEqual(key: key, value: value)
 }
