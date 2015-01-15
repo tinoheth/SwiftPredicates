@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A584E1871A61A2D00010AE00 /* NSPredicateSwifted.h in Headers */ = {isa = PBXBuildFile; fileRef = A584E1861A61A2D00010AE00 /* NSPredicateSwifted.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A584E1871A61A2D00010AE00 /* SwiftPredicate.h in Headers */ = {isa = PBXBuildFile; fileRef = A584E1861A61A2D00010AE00 /* SwiftPredicate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A584E18D1A61A2D00010AE00 /* SwiftPredicates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A584E1811A61A2D00010AE00 /* SwiftPredicates.framework */; };
 		A584E1941A61A2D00010AE00 /* SwiftPredicatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584E1931A61A2D00010AE00 /* SwiftPredicatesTests.swift */; };
 		A584E19F1A61A3110010AE00 /* NSComparisonPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584E19D1A61A3110010AE00 /* NSComparisonPredicate.swift */; };
@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		A584E1811A61A2D00010AE00 /* SwiftPredicates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftPredicates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A584E1851A61A2D00010AE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A584E1861A61A2D00010AE00 /* NSPredicateSwifted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPredicateSwifted.h; sourceTree = "<group>"; };
+		A584E1861A61A2D00010AE00 /* SwiftPredicate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftPredicate.h; sourceTree = "<group>"; };
 		A584E18C1A61A2D00010AE00 /* SwiftPredicatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPredicatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A584E1921A61A2D00010AE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A584E1931A61A2D00010AE00 /* SwiftPredicatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPredicatesTests.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		A584E1831A61A2D00010AE00 /* SwiftPredicates */ = {
 			isa = PBXGroup;
 			children = (
-				A584E1861A61A2D00010AE00 /* NSPredicateSwifted.h */,
+				A584E1861A61A2D00010AE00 /* SwiftPredicate.h */,
 				A584E1A31A61A3870010AE00 /* NSNumber.swift */,
 				A584E19D1A61A3110010AE00 /* NSComparisonPredicate.swift */,
 				A584E19E1A61A3110010AE00 /* NSCompoundPredicate.swift */,
@@ -121,7 +121,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A584E1871A61A2D00010AE00 /* NSPredicateSwifted.h in Headers */,
+				A584E1871A61A2D00010AE00 /* SwiftPredicate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

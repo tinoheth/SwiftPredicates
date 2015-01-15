@@ -16,14 +16,20 @@ public extension NSCompoundPredicate {
 	class func or(predicates: NSPredicate ...) -> NSCompoundPredicate {
 		return NSCompoundPredicate.orPredicateWithSubpredicates(predicates)
 	}
+	
+	class func not(predicate: NSPredicate) -> NSPredicate {
+		return NSCompoundPredicate.notPredicateWithSubpredicate(predicate)
+	}
 }
 
-infix operator ?&& { associativity left precedence 120 }
-public func ?&&(a: NSPredicate, b: NSPredicate) -> NSPredicate {
+public func &&(a: NSPredicate, b: NSPredicate) -> NSPredicate {
 	return NSCompoundPredicate.and(a, b)
 }
 
-infix operator ?|| { associativity left precedence 110 }
-public func ?||(a: NSPredicate, b: NSPredicate) -> NSPredicate {
+public func ||(a: NSPredicate, b: NSPredicate) -> NSPredicate {
 	return NSCompoundPredicate.or(a, b)
+}
+
+public prefix func !(predicate: NSPredicate) -> NSPredicate {
+	return NSCompoundPredicate.notPredicateWithSubpredicate(predicate)
 }
