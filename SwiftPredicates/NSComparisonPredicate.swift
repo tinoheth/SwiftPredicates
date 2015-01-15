@@ -55,6 +55,10 @@ infix operator ?<> { associativity left precedence 130 }
 public func ?<> <T: AnyObject where T: Equatable>(key: String, value: T) -> NSComparisonPredicate {
 	return NSComparisonPredicate.propertyNotEqual(key: key, value: value)
 }
+infix operator ≠ { associativity left precedence 130 }
+public func ≠ <T: AnyObject where T: Equatable>(key: String, value: T) -> NSComparisonPredicate {
+	return NSComparisonPredicate.propertyNotEqual(key: key, value: value)
+}
 
 //infix operator ?< { associativity left precedence 130 }
 public func < <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
