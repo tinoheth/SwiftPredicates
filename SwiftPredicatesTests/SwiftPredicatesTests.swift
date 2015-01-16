@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Tino Heth. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 class SwiftPredicatesTests: XCTestCase {

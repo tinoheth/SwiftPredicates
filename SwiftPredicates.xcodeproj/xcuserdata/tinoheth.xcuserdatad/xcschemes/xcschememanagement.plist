@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SwiftPredicates.xcscheme_^#shared#^_</key>
+		<key>SwiftPredicates Mac.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>SwiftPredicates iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -18,6 +23,21 @@
 			<true/>
 		</dict>
 		<key>A584E18B1A61A2D00010AE00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5D4C9891A69705E0068713E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5D4C99B1A6970800068713E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5D4C9A51A6970810068713E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
