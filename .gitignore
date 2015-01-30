@@ -19,5 +19,6 @@ DerivedData
 *.xcworkspace
 !default.xcworkspace
 
-#CocoaPods
+#Generated dependencies
 Pods
+Carthage
