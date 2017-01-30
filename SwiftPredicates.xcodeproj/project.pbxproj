@@ -261,9 +261,12 @@
 					};
 					A5D4C99B1A6970800068713E = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 					A5D4C9A51A6970810068713E = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -554,6 +557,7 @@
 		A5D4C9B01A6970810068713E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -572,12 +576,14 @@
 				PRODUCT_NAME = SwiftPredicates;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A5D4C9B11A6970810068713E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -593,6 +599,7 @@
 				PRODUCT_NAME = SwiftPredicates;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -614,6 +621,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.t-no.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -632,6 +640,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.t-no.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

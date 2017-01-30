@@ -51,8 +51,9 @@ class SwiftPredicatesTests: XCTestCase {
 		let predicate = "value" < 0 && "name" ?= "Rome"
 		let result = intArray.filtered(using: predicate)
 		XCTAssert(result.count == 1, "Wrong result filtering < and ==")
-		let selection = result.last as NSDictionary
-		XCTAssert(selection["comment"]?.description == "target", "\(selection)")
+		let selection = result.last as? NSDictionary
+		let value = selection?["comment"] as? CustomStringConvertible
+		XCTAssert(value?.description == "target", "\(selection)")
 	}
 	
 //    func testPerformanceExample() {
