@@ -9,11 +9,11 @@
 import Foundation
 
 public func ==(a: NSNumber, b: NSNumber) -> Bool {
-	return a.compare(b) == NSComparisonResult.OrderedSame
+	return a.compare(b) == ComparisonResult.orderedSame
 }
 
 public func <(a: NSNumber, b: NSNumber) -> Bool {
-	return a.compare(b) == NSComparisonResult.OrderedAscending
+	return a.compare(b) == ComparisonResult.orderedAscending
 }
 
 extension NSNumber: Comparable {}

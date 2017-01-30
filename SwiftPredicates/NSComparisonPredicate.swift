@@ -9,73 +9,78 @@
 import Foundation
 
 public extension NSComparisonPredicate {
-	public class func propertyEqual<T: AnyObject where T: Equatable>(#key: String, value: T) -> NSComparisonPredicate {
+	public class func propertyEqual<T: AnyObject>(key: String, _ value: T) -> NSComparisonPredicate where T: Equatable {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
-		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .DirectPredicateModifier, type: NSPredicateOperatorType.EqualToPredicateOperatorType, options: NSComparisonPredicateOptions.allZeros)
+		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .equalTo, options: [])
 	}
 	
-	public class func propertyNotEqual<T: AnyObject where T: Equatable>(#key: String, value: T) -> NSComparisonPredicate {
+	public class func propertyNotEqual<T: AnyObject>(key: String, _ value: T) -> NSComparisonPredicate where T: Equatable {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
-		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .DirectPredicateModifier, type: NSPredicateOperatorType.NotEqualToPredicateOperatorType, options: NSComparisonPredicateOptions.allZeros)
+		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .notEqualTo, options: [])
 	}
 	
-	public class func propertyLessOrEqual<T: AnyObject where T: Comparable>(#key: String, value: T) -> NSComparisonPredicate {
+	public class func propertyLessOrEqual<T: AnyObject>(key: String, _ value: T) -> NSComparisonPredicate where T: Comparable {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
-		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .DirectPredicateModifier, type: NSPredicateOperatorType.LessThanOrEqualToPredicateOperatorType, options: NSComparisonPredicateOptions.allZeros)
+		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .lessThanOrEqualTo, options: [])
 	}
 
-	public class func propertyLess<T: AnyObject where T: Comparable>(#key: String, value: T) -> NSComparisonPredicate {
+	public class func propertyLess<T: AnyObject>(key: String, _ value: T) -> NSComparisonPredicate where T: Comparable {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
-		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .DirectPredicateModifier, type: NSPredicateOperatorType.LessThanPredicateOperatorType, options: NSComparisonPredicateOptions.allZeros)
+		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .lessThan, options: [])
 	}
 	
-	public class func propertyGreaterOrEqual<T: AnyObject where T: Comparable>(#key: NSString, value: T) -> NSComparisonPredicate {
+	public class func propertyGreaterOrEqual<T: AnyObject>(key: String, _ value: T) -> NSComparisonPredicate where T: Comparable {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
-		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .DirectPredicateModifier, type: NSPredicateOperatorType.GreaterThanOrEqualToPredicateOperatorType, options: NSComparisonPredicateOptions.allZeros)
+		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .greaterThanOrEqualTo, options: [])
 	}
 
-	public class func propertyGreater<T: AnyObject where T: Comparable>(#key: String, value: T) -> NSComparisonPredicate {
+	public class func propertyGreater<T: AnyObject>(key: String, _ value: T) -> NSComparisonPredicate where T: Comparable {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
-		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .DirectPredicateModifier, type: NSPredicateOperatorType.GreaterThanPredicateOperatorType, options: NSComparisonPredicateOptions.allZeros)
+		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .greaterThan, options: [])
 	}
 }
 
-infix operator ?= { associativity left precedence 130 }
-public func ?= <T: AnyObject where T: Equatable>(key: String, value: T) -> NSComparisonPredicate {
-	return NSComparisonPredicate.propertyEqual(key: key, value: value)
+precedencegroup NSPredicateCombination {
+	associativity: left
+	lowerThan: AdditionPrecedence
 }
 
-infix operator ?<> { associativity left precedence 130 }
-public func ?<> <T: AnyObject where T: Equatable>(key: String, value: T) -> NSComparisonPredicate {
-	return NSComparisonPredicate.propertyNotEqual(key: key, value: value)
-}
-infix operator ≠ { associativity left precedence 130 }
-public func ≠ <T: AnyObject where T: Equatable>(key: String, value: T) -> NSComparisonPredicate {
-	return NSComparisonPredicate.propertyNotEqual(key: key, value: value)
+infix operator ?= : NSPredicateCombination
+public func ?= <T: AnyObject>(key: String, value: T) -> NSComparisonPredicate where T: Equatable {
+	return NSComparisonPredicate.propertyEqual(key: key, value)
 }
 
-//infix operator ?< { associativity left precedence 130 }
-public func < <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
-	return NSComparisonPredicate.propertyLess(key: key, value: value)
+infix operator ?<> : NSPredicateCombination
+public func ?<> <T: AnyObject>(key: String, value: T) -> NSComparisonPredicate where T: Equatable {
+	return NSComparisonPredicate.propertyNotEqual(key: key, value)
+}
+infix operator ≠ : NSPredicateCombination
+public func ≠ <T: AnyObject>(key: String, value: T) -> NSComparisonPredicate where T: Equatable {
+	return NSComparisonPredicate.propertyNotEqual(key: key, value)
 }
 
-//infix operator ?<= { associativity left precedence 130 }
-public func <= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
-	return NSComparisonPredicate.propertyLessOrEqual(key: key, value: value)
+//infix operator ?< : NSPredicateCombination
+public func < <T: AnyObject>(key: String, value: T) -> NSComparisonPredicate where T: Comparable {
+	return NSComparisonPredicate.propertyLess(key: key, value)
 }
 
-//infix operator ?> { associativity left precedence 130 }
-public func > <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
-	return NSComparisonPredicate.propertyGreater(key: key, value: value)
+//infix operator ?<= : NSPredicateCombination
+public func <= <T: AnyObject>(key: String, value: T) -> NSComparisonPredicate where T: Comparable {
+	return NSComparisonPredicate.propertyLessOrEqual(key: key, value)
 }
 
-//infix operator ?>= { associativity left precedence 130 }
-public func >= <T: AnyObject where T: Comparable>(key: String, value: T) -> NSComparisonPredicate {
-	return NSComparisonPredicate.propertyGreaterOrEqual(key: key, value: value)
+//infix operator ?> : NSPredicateCombination
+public func > <T: AnyObject>(key: String, value: T) -> NSComparisonPredicate where T: Comparable {
+	return NSComparisonPredicate.propertyGreater(key: key, value)
+}
+
+//infix operator ?>= : NSPredicateCombination
+public func >= <T: AnyObject>(key: String, value: T) -> NSComparisonPredicate where T: Comparable {
+	return NSComparisonPredicate.propertyGreaterOrEqual(key: key, value)
 }

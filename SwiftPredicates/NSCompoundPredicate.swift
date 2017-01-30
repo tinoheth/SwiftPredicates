@@ -9,16 +9,16 @@
 import Foundation
 
 public extension NSCompoundPredicate {
-	class func and(predicates: NSPredicate ...) -> NSCompoundPredicate {
-		return NSCompoundPredicate.andPredicateWithSubpredicates(predicates)
+	class func and(_ predicates: NSPredicate ...) -> NSCompoundPredicate {
+		return NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
 	}
 
-	class func or(predicates: NSPredicate ...) -> NSCompoundPredicate {
-		return NSCompoundPredicate.orPredicateWithSubpredicates(predicates)
+	class func or(_ predicates: NSPredicate ...) -> NSCompoundPredicate {
+		return NSCompoundPredicate(orPredicateWithSubpredicates: predicates)
 	}
 	
-	class func not(predicate: NSPredicate) -> NSPredicate {
-		return NSCompoundPredicate.notPredicateWithSubpredicate(predicate)
+	class func not(_ predicate: NSPredicate) -> NSPredicate {
+		return NSCompoundPredicate(notPredicateWithSubpredicate: predicate)
 	}
 }
 
@@ -31,5 +31,5 @@ public func ||(a: NSPredicate, b: NSPredicate) -> NSPredicate {
 }
 
 public prefix func !(predicate: NSPredicate) -> NSPredicate {
-	return NSCompoundPredicate.notPredicateWithSubpredicate(predicate)
+	return NSCompoundPredicate(notPredicateWithSubpredicate: predicate)
 }
