@@ -8,7 +8,7 @@
 
 import XCTest
 
-class SwiftPredicatesTests: XCTestCase {
+class DictionaryTests: XCTestCase {
 	
 	let intArray: NSArray = [
 		["value":0, "name":"Paris"],
@@ -16,17 +16,7 @@ class SwiftPredicatesTests: XCTestCase {
 		["value":-1, "name":"Rome", "comment":"target"],
 		["value":55]
 	]
-	
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
+
 	func testLess() {
 		let predicate = "value" < 0
 		let result = intArray.filtered(using: predicate)
@@ -41,26 +31,18 @@ class SwiftPredicatesTests: XCTestCase {
 	
 	func testLessAndEqual() {
 		let a = "value" < 0
-		let b = "name" ?= "Rome"
-		let predicate = a && b
+		let b = NSComparisonPredicate.propertyEqual(key: "name", "Rome")
+		let predicate: NSCompoundPredicate = a && b
 		let result = intArray.filtered(using: predicate)
 		XCTAssert(result.count == 1, "Wrong result filtering < and ==")
 	}
 	
 	func testLessAndEqualCombined() {
-		let predicate = "value" < 0 && "name" ?= "Rome"
+		let predicate = "value" < 0 && "name" == "Rome"
 		let result = intArray.filtered(using: predicate)
 		XCTAssert(result.count == 1, "Wrong result filtering < and ==")
 		let selection = result.last as? NSDictionary
 		let value = selection?["comment"] as? CustomStringConvertible
-		XCTAssert(value?.description == "target", "\(selection)")
+		XCTAssert(value?.description == "target")
 	}
-	
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measureBlock() {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
-	
 }
