@@ -215,7 +215,7 @@
 		A584E1781A61A2D00010AE00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Tino Heth";
 				TargetAttributes = {
 					A584E1801A61A2D00010AE00 = {
@@ -224,21 +224,22 @@
 					};
 					A5D4C99B1A6970800068713E = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Automatic;
 					};
 					A5D4C9A51A6970810068713E = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
 			buildConfigurationList = A584E17B1A61A2D00010AE00 /* Build configuration list for PBXProject "SwiftPredicates" */;
 			compatibilityVersion = "Xcode 10.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = A584E1771A61A2D00010AE00;
 			productRefGroup = A584E1821A61A2D00010AE00 /* Products */;
@@ -327,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -340,6 +342,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -359,6 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -370,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -383,6 +388,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -397,6 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -422,6 +429,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.t-no.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftPredicates;
 				SKIP_INSTALL = YES;
@@ -447,6 +455,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.t-no.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftPredicates;
 				SKIP_INSTALL = YES;
@@ -469,9 +478,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.t-no.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftPredicates;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -491,9 +502,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.t-no.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftPredicates;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -512,6 +525,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.t-no.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -530,6 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.t-no.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

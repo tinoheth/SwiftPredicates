@@ -4,45 +4,45 @@
 import Foundation
 
 public extension NSComparisonPredicate {
-	public convenience init<LHS: ExpressionSource, RHS: ExpressionSource>(_ lhs: LHS, _ rhs: RHS, operator: NSComparisonPredicate.Operator) where LHS.Destination == RHS.Destination {
+    convenience init<LHS: ExpressionSource, RHS: ExpressionSource>(_ lhs: LHS, _ rhs: RHS, operator: NSComparisonPredicate.Operator) where LHS.Destination == RHS.Destination {
 		self.init(leftExpression: lhs.expression, rightExpression: rhs.expression, modifier: .direct, type: `operator`, options: [])
 	}
 
-	public convenience init<LHS: ExpressionSource, RHS: ExpressionSource>(_ lhs: LHS, _ rhs: RHS, operator: NSComparisonPredicate.Operator) where LHS.Destination == RHS.Destination? {
+    convenience init<LHS: ExpressionSource, RHS: ExpressionSource>(_ lhs: LHS, _ rhs: RHS, operator: NSComparisonPredicate.Operator) where LHS.Destination == RHS.Destination? {
 		self.init(leftExpression: lhs.expression, rightExpression: rhs.expression, modifier: .direct, type: `operator`, options: [])
 	}
 
-	public class func propertyEqual<T: Equatable>(key: String, _ value: T) -> NSComparisonPredicate {
+    class func propertyEqual<T: Equatable>(key: String, _ value: T) -> NSComparisonPredicate {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
 		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .equalTo, options: [])
 	}
 
-	public class func propertyNotEqual<T: Equatable>(key: String, _ value: T) -> NSComparisonPredicate {
+    class func propertyNotEqual<T: Equatable>(key: String, _ value: T) -> NSComparisonPredicate {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
 		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .notEqualTo, options: [])
 	}
 
-	public class func propertyLessOrEqual<T: Comparable>(key: String, _ value: T) -> NSComparisonPredicate {
+    class func propertyLessOrEqual<T: Comparable>(key: String, _ value: T) -> NSComparisonPredicate {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
 		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .lessThanOrEqualTo, options: [])
 	}
 
-	public class func propertyLess<T: Comparable>(key: String, _ value: T) -> NSComparisonPredicate {
+    class func propertyLess<T: Comparable>(key: String, _ value: T) -> NSComparisonPredicate {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
 		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .lessThan, options: [])
 	}
 
-	public class func propertyGreaterOrEqual<T: Comparable>(key: String, _ value: T) -> NSComparisonPredicate {
+    class func propertyGreaterOrEqual<T: Comparable>(key: String, _ value: T) -> NSComparisonPredicate {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
 		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .greaterThanOrEqualTo, options: [])
 	}
 
-	public class func propertyGreater<T: Comparable>(key: String, _ value: T) -> NSComparisonPredicate {
+    class func propertyGreater<T: Comparable>(key: String, _ value: T) -> NSComparisonPredicate {
 		let left = NSExpression(forKeyPath: key)
 		let right = NSExpression(forConstantValue: value)
 		return NSComparisonPredicate(leftExpression: left, rightExpression: right, modifier: .direct, type: .greaterThan, options: [])
